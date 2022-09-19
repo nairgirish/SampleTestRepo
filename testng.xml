@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sample Browser Test Suite" verbose="3">
+
+    <test name="Sample WebDriver Test">
+        <classes>
+            <class name="com.tests.SampleTest" />
+        </classes>
+    </test>
+
+</suite>
