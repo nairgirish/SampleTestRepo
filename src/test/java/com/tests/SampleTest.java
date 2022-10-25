@@ -19,12 +19,11 @@ public class SampleTest {
     @BeforeMethod
     public void setUp() {
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless"); //!!!should be enabled for Jenkins
-        options.addArguments("--disable-dev-shm-usage"); //!!!should be enabled for Jenkins
-        options.addArguments("--window-size=1920x1080"); //!!!should be enabled for Jenkins
-        options.addArguments("--headless");
         WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless"); 
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless");       
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
