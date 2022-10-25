@@ -19,18 +19,17 @@ public class SampleTest {
     @BeforeMethod
     public void setUp() {
 
-        WebDriverManager.chromedriver().setup();
-        /*
+        WebDriverManager.chromedriver().clearDriverCache().forceDownload().setup();     
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless"); 
         options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");    
-        */
+     
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofMinutes(1));
         driver.get("https://www.amazon.in/");
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofMinutes(1));
+        
 
     }
 
